@@ -20,7 +20,6 @@
 | 4주차 | `Spring Function` | Spring Cloud Function `CVE-2022-22963` / [Spring Security Advisory](https://spring.io/security/cve-2022-22963/) | 특정 CTF Archive 원본을 그대로 가져온 문제가 아니라, 취약 버전 Spring Cloud Function의 routing expression / SpEL Injection 동작을 로컬에서 학습할 수 있도록 만든 **교육용 재구성 문제**입니다. |
 | 5주차 | `baby-jinjail` | idekCTF 2021 / [`ctf-archives`](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/idekCTF/2021/web/baby-jinjail) | Archive의 원본 `app.py`와 템플릿을 그대로 사용하고 Docker 배포 래퍼, localhost 포트, 스터디용 플래그 처리만 추가했습니다. |
 | 5주차 | `file_viewer` | Lexington Informatics Tournament CTF 2025 / [`ctf-archives`](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/LexingtonInformaticsTournament/2025/web/file_viewer) | Archive의 원본 `app.py`를 그대로 사용합니다. 원본에 별도 Docker 환경이 없어 Dockerfile, 샘플 파일, 로컬 포트 및 스터디용 플래그 처리를 추가했습니다. |
-| 5주차 | `Mastodon't` | Hack.lu CTF 2023 / [`ctf-archives`](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/Hack.lu/2023/web/Mastodont) | 원본이 지정한 취약 Mastodon 소스, ImageMagick, `readflag`, s6 초기화 구조를 유지합니다. 빌드 시 `ctf-archives`의 고정 커밋에서 원본 소스를 가져오며 로컬 포트, 스터디용 플래그, 현재 Debian에서 실패할 수 있는 일부 배포 단계를 조정했습니다. `CVE-2023-36460` 기반입니다. |
 | 5주차 | `fancy-notes` | idekCTF 2021 / [`ctf-archives`](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/idekCTF/2021/web/fancy-notes) | 원본 `app.py`, 템플릿, 정적 파일, `bot.js`를 그대로 사용합니다. 오래된 Chrome/Puppeteer Docker 환경을 현재 환경에서 빌드 가능하도록 Chromium/Python 기반 배포 래퍼로 조정하고 로컬 포트와 스터디용 플래그 처리를 추가했습니다. |
 
 ## 공통 배포 변경 사항
