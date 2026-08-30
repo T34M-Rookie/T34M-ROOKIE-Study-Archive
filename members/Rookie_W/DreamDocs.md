@@ -52,6 +52,7 @@ for i in range(100, 1000):
             print(f"\n[+] FLAG Found! Document ID: {i}")
             print(f"[+] Response Content:\n{response.text}")
             break
+```
 
 4. Execution & Result
 브루트포스 스크립트 실행 결과, Document ID: 106 번 문서에서 FLAG가 노출되는 것을 확인했습니다.
