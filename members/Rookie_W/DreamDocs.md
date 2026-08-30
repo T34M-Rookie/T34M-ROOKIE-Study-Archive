@@ -53,13 +53,12 @@ for i in range(100, 1000):
             print(f"[+] Response Content:\n{response.text}")
             break
 ```
+---
 
-4. Execution & Result
-브루트포스 스크립트 실행 결과, Document ID: 106 번 문서에서 FLAG가 노출되는 것을 확인했습니다.
+## 4. **Execution & Result**
+   브루트포스 스크립트 실행 결과, Document ID: 106 번 문서에서 FLAG가 노출되는 것을 확인했습니다.
+   해당 응답 본문을 통해 최종 FLAG를 획득하였습니다.
 
-해당 응답 본문을 통해 최종 FLAG를 획득하였습니다.
-
-5. Takeaways
-헤더 기반 권한 검증 위험성: 클라이언트가 전송하는 HTTP Header(X-User, Referer 등)는 신뢰할 수 없는 데이터이므로, 이를 이용한 접근 제어 로직은 세션/토큰 등 안전한 인증 메커니즘으로 대체해야 합니다.
-
-Referer 위조: 출처 검증 목적으로 Referer 헤더만 단독 활용하는 것은 쉽게 우회될 수 있음을 확인했습니다.            
+## 5. **Takeaways**
+   * **헤더 기반 권한 검증 위험성:** 클라이언트가 전송하는 HTTP Header(X-User, Referer 등)는 신뢰할 수 없는 데이터이므로, 이를 이용한 접근 제어 로직은 세션/토큰 등 안전한 인증 메커니즘으로 대체해야 합니다.
+   * **Referer 위조:** 출처 검증 목적으로 Referer 헤더만 단독 활용하는 것은 쉽게 우회될 수 있음을 확인했습니다.
