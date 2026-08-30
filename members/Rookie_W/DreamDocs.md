@@ -3,7 +3,7 @@
 ## 1. Overview
 * **Target Challenge:** DreamDocs
 * **Category:** Web Hacking
-* **Key Concept:** HTTP Header-based Access Control Bypass (Broken Access Control)
+* **Key Concept:** HTTP 헤더 기반 접근 제어 우회 (Broken Access Control)
 
 ---
 
