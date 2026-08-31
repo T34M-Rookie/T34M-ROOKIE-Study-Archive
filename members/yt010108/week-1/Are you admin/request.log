@@ -1,0 +1,20 @@
+GET / HTTP/1.1
+Host: 59.2.159.191:8888
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36
+Authorization: Basic YWRtaW46MWRlOThlMTM3MDhjMWYxZjYwMjNlMTMxYTdiZDg2NzY=
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://127.0.0.1:8000/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+
+GET / HTTP/1.1
+Host: 59.2.159.191:8888
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/146.0.0.0 Safari/537.36
+Authorization: Basic YWRtaW46MWRlOThlMTM3MDhjMWYxZjYwMjNlMTMxYTdiZDg2NzY=
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://127.0.0.1:8000/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+
