@@ -90,7 +90,7 @@ Content-Type: image/png`
 
 Command 입력창 밑에 flag가 출력 됨.
 
-
+---
 
 ## 5. **Takeaways**
 * **Null Byte Injection 취약점 이해:** 파일 업로드 시 파일명의 `%00`(Null Byte) 문자로 인해 검증 로직과 실제 파일 시스템 처리 로직 간의 해석 차이가 발생하여 확장자 검증이 우회될 수 있음을 확인했습니다.
