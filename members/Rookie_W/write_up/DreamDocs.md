@@ -7,7 +7,7 @@
 
 ## 2. Vulnerability Analysis
 
-### Endpoints
+### Endpoint
 * `/share`
 * `/doc/<int:doc_id>`
 * `/api/docs`
