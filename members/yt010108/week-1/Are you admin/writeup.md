@@ -1,6 +1,5 @@
 # Are you admin
 
-: 유영택
 구분: 공통 문제
 난이도: Easy
 문제 링크: https://dreamhack.io/wargame/challenges/1922
