@@ -17,7 +17,7 @@
 
 1. **`X-User` Header Validation Bypass**
    * **원인:** 서버가 사용자 권한을 검증할 때 `request.headers.get('X-User')` 값을 그대로 신뢰합니다.
-   * **취약점:** HTTP 요청 헤더는 클라이언트 측에서 자유롭게 조작 가능하므로, `X-User: admin` 헤더를 추가하여 서버를 관리자로 오인하게 만들 수 있습니다.
+   * **취약점:** HTTP 요청 헤더는 클라이언트 측에서 자유롭게 조작 가능하므로, `X-User: admin` 헤더를 추가하여 서버가 일반사용자를 관리자로 오인하게 만들 수 있습니다.
 
 2. **`Referer` Header Spoofing**
    * **원인:** 이전 요청 출처를 검증하기 위해 `request.headers.get('Referer')` 헤더를 검사합니다.
