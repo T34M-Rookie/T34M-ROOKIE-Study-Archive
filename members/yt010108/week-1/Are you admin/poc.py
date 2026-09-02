@@ -7,7 +7,7 @@ from urllib.parse import quote
 import requests
 
 
-TARGET = "http://host3.dreamhack.games:8407"
+TARGET = "url"
 CALLBACK_IP = "Ip"
 CALLBACK_PORT = 8888
 
