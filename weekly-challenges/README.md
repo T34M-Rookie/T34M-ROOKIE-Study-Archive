@@ -6,21 +6,25 @@
 
 > 원본 문제의 저작권과 권리는 각 대회 및 문제 제작자에게 있습니다. 이 저장소의 패키지는 보안 학습 및 스터디용으로 재구성한 자료입니다.
 
-## 문제 출처 및 변형 내역
+## 문제 출처 및 핵심 취약점
 
-| 주차 | 문제 | 원본 / 출처 | T34M ROOKIE 변형 내역 |
-| --- | --- | --- | --- |
-| 2주차 | `Renderer` | scriptCTF 2025 / [`sajjadium/ctf-archives`](https://github.com/sajjadium/ctf-archives) | 원본 웹 문제 로직을 기준으로 로컬 Docker 실행 환경, localhost 포트 바인딩, 스터디용 플래그 처리를 추가했습니다. |
-| 2주차 | `What` | BCACTF 2025 / [`sajjadium/ctf-archives`](https://github.com/sajjadium/ctf-archives) | PHP loose comparison 및 MD5 Magic Hash 핵심 로직은 유지하고 Docker 환경과 스터디용 플래그를 적용했습니다. |
-| 2주차 | `Wizard Gallery` | scriptCTF 2025 / [`sajjadium/ctf-archives`](https://github.com/sajjadium/ctf-archives) | 원본 파일 업로드/처리 흐름과 취약 ImageMagick 환경을 로컬 Docker에서 재현하도록 구성하고 플래그 경로 및 배포 설정을 조정했습니다. `CVE-2022-44268` 기반입니다. |
-| 3주차 | `CandyCrash` | m0leCon 2026 Beginner / [`sajjadium/ctf-archives`](https://github.com/sajjadium/ctf-archives) | Archive에 핵심 백엔드 `CandyCrash.js`는 남아 있었지만 원본 `client/engine.js`와 프론트엔드 파일이 보존되지 않아, 백엔드 세션/리플레이/VM 취약 로직은 유지하고 누락된 match-3 게임 엔진과 프론트엔드는 스터디용으로 복원했습니다. **프론트/엔진은 원본의 완전한 복제본이 아닌 재구성입니다.** |
-| 3주차 | `Log4baby` | COMPFEST 2022 / [`sajjadium/ctf-archives`](https://github.com/sajjadium/ctf-archives) | Archive에 보존된 `HomeController.java`와 Log4j 2.14.1 핵심 로깅 로직을 기준으로 실행 가능한 Spring 프로젝트/Docker 환경을 구성했습니다. 주변 프로젝트 파일은 스터디용 재구성입니다. |
-| 4주차 | `Vibecoder` | Welcome CTF 2025 공개 문제 소스 | 원본 JWT 검증 실수(`alg: none`)를 유지하고 Docker 실행 환경, 로컬 포트 및 스터디용 플래그 처리를 추가했습니다. |
-| 4주차 | `Classic Web` | Welcome CTF 2025 `This is just one of those classic web challenges` 공개 문제 소스 | 원본 SQLite Injection 흐름은 유지했습니다. PHP Docker 환경과 스터디용 플래그를 추가했고, 현재 공식 PHP 이미지에서 이미 제공되는 SQLite 확장을 다시 컴파일하지 않도록 Dockerfile을 조정했습니다. |
-| 4주차 | `Spring Function` | Spring Cloud Function `CVE-2022-22963` / [Spring Security Advisory](https://spring.io/security/cve-2022-22963/) | 특정 CTF Archive 원본을 그대로 가져온 문제가 아니라, 취약 버전 Spring Cloud Function의 routing expression / SpEL Injection 동작을 로컬에서 학습할 수 있도록 만든 **교육용 재구성 문제**입니다. |
-| 5주차 | `baby-jinjail` | idekCTF 2021 / [`ctf-archives`](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/idekCTF/2021/web/baby-jinjail) | Archive의 원본 `app.py`와 템플릿을 그대로 사용하고 Docker 배포 래퍼, localhost 포트, 스터디용 플래그 처리만 추가했습니다. |
-| 5주차 | `file_viewer` | Lexington Informatics Tournament CTF 2025 / [`ctf-archives`](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/LexingtonInformaticsTournament/2025/web/file_viewer) | Archive의 원본 `app.py`를 그대로 사용합니다. 원본에 별도 Docker 환경이 없어 Dockerfile, 샘플 파일, 로컬 포트 및 스터디용 플래그 처리를 추가했습니다. |
-| 5주차 | `fancy-notes` | idekCTF 2021 / [`ctf-archives`](https://github.com/sajjadium/ctf-archives/tree/main/ctfs/idekCTF/2021/web/fancy-notes) | 원본 `app.py`, 템플릿, 정적 파일, `bot.js`를 그대로 사용합니다. 오래된 Chrome/Puppeteer Docker 환경을 현재 환경에서 빌드 가능하도록 Chromium/Python 기반 배포 래퍼로 조정하고 로컬 포트와 스터디용 플래그 처리를 추가했습니다. |
+| 주차 | 문제 | 원본문제 | 유형 / 핵심 취약점 | 핵심적으로 익히는 것 |
+| --- | --- | --- | --- | --- |
+| 2주차 | `Renderer` | scriptCTF 2025 | **Information Disclosure / Broken Access Control** | 정적 경로에 노출된 secret 파일 → 개발자 쿠키 탈취 → 인증 우회 |
+| 2주차 | `What` | BCACTF 2025 | **PHP Type Juggling / MD5 Magic Hash** | `==` loose comparison, `0e...` 형태 해시를 이용한 비교 우회 |
+| 2주차 | `Wizard Gallery` | scriptCTF 2025 | **File Upload + ImageMagick CVE-2022-44268** | 조작된 이미지 처리 → 서버 로컬 파일 읽기 / 메타데이터를 통한 정보 유출 |
+| 3주차 | `CandyCrash` | m0leCon 2026 Beginner | **Node.js VM / Unsafe State Handling** | 게임 replay/state 처리 분석, 서버 로직 악용, VM/debug 기능을 이용한 공격 |
+| 3주차 | `Log4baby` | COMPFEST 2022 | **Log4Shell / JNDI Injection** | 사용자 입력이 Log4j에 기록 → `${jndi:...}` 해석 → 외부 객체 로딩/RCE 계열 |
+| 4주차 | `Vibecoder` | Welcome CTF 2025 | **JWT Verification Bypass** | JWT 구조 이해, `alg: none`, 서명 검증 실패를 이용한 인증 우회 |
+| 4주차 | `Classic Web` | Welcome CTF 2025 | **SQL Injection — SQLite** | 입력값이 SQL 문에 들어가는 구조 분석 → 쿼리 조작 |
+| 4주차 | `Spring Function` | CVE Lab | **SpEL Injection / RCE — CVE-2022-22963** | Spring Cloud Function routing expression 악용 → SpEL 표현식 실행 → RCE |
+| 5주차 | `baby-jinjail` | idekCTF 2021 | **SSTI / Jinja Sandbox Escape** | Jinja 객체 접근, 필터 우회, 제한된 템플릿 환경 탈출 |
+| 5주차 | `file_viewer` | LIT CTF 2025 | **Path Traversal / Arbitrary File Read** | 사용자 입력 경로 조작 → 의도한 디렉터리 밖의 파일 읽기 |
+| 5주차 | `fancy-notes` | idekCTF 2021 | **Client-side Prototype Pollution + XS-Leak + Admin Bot** | 취약한 `arg.js` prototype pollution → 이미지 요청을 oracle로 사용 → 관리자 flag note를 문자 단위로 추론 |
+| 5주차 | `Mastodon't` | Hack.lu CTF 2023 | **CVE-2023-36460 / Path Traversal → Arbitrary File Write → RCE** | 실제 Mastodon CVE 분석, crafted media, 임의 파일 생성/덮어쓰기, RCE 체인 |
+| 6주차 | `SSRF101` | WolvCTF 2022 | **SSRF / Internal Service Access** | 서버 측 요청 기능 분석 → localhost 내부 서비스 접근 → 연쇄 엔드포인트를 통한 flag 읽기 |
+| 6주차 | `difference-check` | idekCTF 2021 | **SSRF Filter Bypass** | SSRF 필터 검증 요청과 실제 요청의 차이 분석 → URL 검증/요청 불일치 악용 → 로컬 flag 엔드포인트 접근 |
+| 6주차 | `graphql-101` | LINE CTF 2024 | **GraphQL Logic Flaw / Rate Limit Bypass** | GraphQL API 구조, OTP 상태 관리와 rate limit 동작 분석 → WAF 및 요청 제한 우회 → admin 인증 로직 공략 |
 
 ## 공통 배포 변경 사항
 
