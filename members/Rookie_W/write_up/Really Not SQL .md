@@ -137,13 +137,13 @@ if ($_SESSION['user'] !== "admin") {
 crackstation 사이트를 이용하였다.
 
 #### admin 출력 결과
-![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/57bd837c2f30a11a34dcb6957c72ed756da81087459a981d0a5e8ab2a66389c1.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/3a8c1ca4e24d26dc6a0663db6c1e194883d6a9089f24bfd2bd4ad9d65ad57335.png)
 
 Not found로 존재하지 않는다라는 문구가 떳다.
 
 #### guest 출력 결과
 
-![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/78d384f3e27d691a49ab2797f47ead795dbf97aa97d2d44c8a98ee0e6ca3e8c5.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/a380e2d3df243868dd263ddccdfd48f7dcbcd68a2bfcb1eaefd63d63b288a38c.png)
 
 guest는 pw는 guest인거 같았다.
 
@@ -155,11 +155,11 @@ cmd에서 이용할 Payload를 작성하였다.
 `curl -X PUT http://host3.dreamhack.games:12071/user/admin.json -d "{\"no\": 0, \"id\": \"admin\", \"password\": \"84983c60f7daadc1cb8698621f802c0d9f9a3c3c295c810748fb048115c186ec\"}`
 
 PUT 메서드를 사용하는 이유중 하나는 문제파일에 000-default.conf에 DAV on이라는 것때문에 사용을 하였음.
-![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/a72727e2b2041e19958578daae67fa703a8fe699c1b8227f1577bf93d281f05c.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/b06f851da018d4150821b033aaed55efb6dfdbd224b16cb6f7b11d9539d48b7f.png)
 
 왜냐면 이 기능은 서버의 파일/디렉터리를 수정, 이동, 삭제, 업로드(PUT), 다운로드하는 등의 작업을 수행할 수 있기 때문입니다. 
 
-![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/008a12d397940fd653cd42244de29d025c42a9fd4446ff94f311cfcd30b6f7b4.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/2049e7a4bd69f64ba191d830b05b3cb22fddfef6ceaa850c93a0ca3dcb1a134d.png)
 
 로그인한 결과 Hello admin 팝업창과 함께 admin으로 로그인을 성공한 것을 알 수 있었다.
 
@@ -170,7 +170,7 @@ PUT 메서드를 사용하는 이유중 하나는 문제파일에 000-default.co
 ---
 
 ## 4. **Execution & Result**
-![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/f6ec61ba4f88a157b47331f62ae1023b6ba6e9d5e2b0dd58ee4d28ee2b202960.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/9b0d62d3a042974eb4cb0b2323e200bc328d8212bf6019aeb3b72bd8a619c968.png)
 flag를 획득 할 수 있었다.
 
 ---
