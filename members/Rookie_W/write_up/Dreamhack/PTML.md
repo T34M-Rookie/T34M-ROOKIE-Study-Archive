@@ -27,7 +27,7 @@
 @app.route('/upload', methods=['POST'])
 def upload_file():
     ...
-    # 파일 업로드 시 UUID를 결합하여 저장 후 Selenium Bot 실행
+    # 파일 업로드 시 UUID를 결합하여 저장 후 Bot 실행
     unique_filename = f"{unique_id}_{filename}"
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], unique_filename)
     file.save(file_path)
@@ -38,7 +38,7 @@ def upload_file():
 
 
 def read_file(filename):
-    # Selenium Bot에 FLAG 쿠키 주입 후 접속
+    # Bot에 FLAG 쿠키 주입 후 접속
     cookie = {
         "name": "flag",
         "value": FLAG
@@ -59,7 +59,7 @@ def read_file(filename):
 
 파일이 업로드되면 UUID가 포함된 이름으로 저장됩니다.
 
-이후 `read_file()` 함수가 실행되며 Selenium Bot에 `flag` 쿠키를 설정한 뒤 업로드된 SVG 파일이 포함된 페이지에 접근합니다.
+이후 `read_file()` 함수가 실행되며 Bot에 `flag` 쿠키를 설정한 뒤 업로드된 SVG 파일이 포함된 페이지에 접근합니다.
 
 #### `main.py`
 
@@ -124,7 +124,7 @@ https://tools.dreamhack.games/
 
 작성한 `exploit.svg` 파일을 웹 인터페이스를 통해 업로드했습니다.
 
-SVG 파일은 `main.py`의 태그 화이트리스트 검증을 통과하였으며, 이후 동기적으로 실행된 Selenium Bot이 업로드된 파일을 포함한 페이지에 접근했습니다.
+SVG 파일은 `main.py`의 태그 화이트리스트 검증을 통과하였으며, 이후 동기적으로 실행된 Bot이 업로드된 파일을 포함한 페이지에 접근했습니다.
 
 그 결과 SVG에 포함된 이벤트 핸들러가 실행되었습니다.
 
