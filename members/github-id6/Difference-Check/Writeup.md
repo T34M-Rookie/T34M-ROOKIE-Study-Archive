@@ -46,9 +46,9 @@ local 에서 온 요청한테만 flag를 준다는 방식의 문제라서
 
 js에서 파일로드할때 [::1]:{port}/flag로 302 redirect 요청 , 이때 서버가 필터링을 안해서취약
 
-!문제.png
+![q](./images/문제.png)
 
-!flag.png
+![a](./images/flag.png)
 
 사용된 POST DATA
 
