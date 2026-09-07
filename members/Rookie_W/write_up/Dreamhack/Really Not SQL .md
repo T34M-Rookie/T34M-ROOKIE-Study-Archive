@@ -137,12 +137,13 @@ if ($_SESSION['user'] !== "admin") {
 crackstation 사이트를 이용하였다.
 
 #### admin 출력 결과
-![image.png](https://camo.githubusercontent.com/55e3736646e701d679e48e3a6d4975e54d9b4af6b1b2d76dd86322d230165bdc/68747470733a2f2f647265616d6861636b2d6d656469612e73332e616d617a6f6e6177732e636f6d2f6174746163686d656e74732f353762643833376332663330613131613334646362363935376337326564373536646138313038373435396139383164306135653861623261363633383963312e706e67)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/57bd837c2f30a11a34dcb6957c72ed756da81087459a981d0a5e8ab2a66389c1.png)
 
 Not found로 존재하지 않는다라는 문구가 떳다.
 
 #### guest 출력 결과
-![image.png](https://camo.githubusercontent.com/da4dab564580eefbb43bb277daa5fadc0425cc079d248a6fb36c4e2dce5ff8e1/68747470733a2f2f647265616d6861636b2d6d656469612e73332e616d617a6f6e6177732e636f6d2f6174746163686d656e74732f373864333834663365323764363931613439616232373937663437656164373935646266393761613937643264343463386139386565306536636133653863352e706e67)
+
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/78d384f3e27d691a49ab2797f47ead795dbf97aa97d2d44c8a98ee0e6ca3e8c5.png)
 
 guest는 pw는 guest인거 같았다.
 
@@ -154,11 +155,11 @@ cmd에서 이용할 Payload를 작성하였다.
 `curl -X PUT http://host3.dreamhack.games:12071/user/admin.json -d "{\"no\": 0, \"id\": \"admin\", \"password\": \"84983c60f7daadc1cb8698621f802c0d9f9a3c3c295c810748fb048115c186ec\"}`
 
 PUT 메서드를 사용하는 이유중 하나는 문제파일에 000-default.conf에 DAV on이라는 것때문에 사용을 하였음.
-![image.png](https://camo.githubusercontent.com/c52a7ed9e58df72c6c9ffd4fe36f08d4c6647068501f2399958633535f57877e/68747470733a2f2f647265616d6861636b2d6d656469612e73332e616d617a6f6e6177732e636f6d2f6174746163686d656e74732f613732373237653262323034316531393935383537386461616536376661373033613866653639396331623832323766313537376266393364323831663035632e706e67)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/a72727e2b2041e19958578daae67fa703a8fe699c1b8227f1577bf93d281f05c.png)
 
 왜냐면 이 기능은 서버의 파일/디렉터리를 수정, 이동, 삭제, 업로드(PUT), 다운로드하는 등의 작업을 수행할 수 있기 때문입니다. 
 
-![alt text](image-4.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/008a12d397940fd653cd42244de29d025c42a9fd4446ff94f311cfcd30b6f7b4.png)
 
 로그인한 결과 Hello admin 팝업창과 함께 admin으로 로그인을 성공한 것을 알 수 있었다.
 
@@ -169,7 +170,7 @@ PUT 메서드를 사용하는 이유중 하나는 문제파일에 000-default.co
 ---
 
 ## 4. **Execution & Result**
-![alt text](image-6.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/f6ec61ba4f88a157b47331f62ae1023b6ba6e9d5e2b0dd58ee4d28ee2b202960.png)
 flag를 획득 할 수 있었다.
 
 ---

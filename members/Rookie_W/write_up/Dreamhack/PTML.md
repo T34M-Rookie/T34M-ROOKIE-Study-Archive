@@ -101,7 +101,8 @@ RequestBin(knzgsym.request.dreamhack.games) 수신 로그의 Referer 헤더 쿼�
 URL 디코딩 수행 후 최종 FLAG 획득:
 flag를 획득 할 수 있었다.
 
-![alt text](image-5.png)
+![image.png](https://dreamhack-media.s3.amazonaws.com/attachments/db6a01cd706e577440b8c448b9037b965a6bdbf9999ce4726ae93c529a4bcbe7.png)
+
 
 ---
 
