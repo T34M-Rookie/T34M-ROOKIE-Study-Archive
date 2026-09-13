@@ -1,5 +1,3 @@
-Dyslexxec Write-up
-
 ## 1. Overview
 
 * **Target Challenge:** Dyslexxec
