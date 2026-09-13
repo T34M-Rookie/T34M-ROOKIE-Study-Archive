@@ -305,7 +305,7 @@ exploit.xlsm
     → XXE 페이로드 실행
 ```
 
-<!-- 업로드 화면 캡처 예시: ![Exploit upload](images/upload.png) -->
+![upload](image-10.png)
 
 ---
 
@@ -323,7 +323,7 @@ Value      : FLAG{...}
 
 따라서 메타데이터 결과 페이지에서 최종 FLAG를 확인할 수 있습니다.
 
-<!-- 결과 화면 캡처 예시: ![XXE result](images/result.png) -->
+![flag](image-9.png)
 
 ---
 
