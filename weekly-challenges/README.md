@@ -25,6 +25,12 @@
 | 6주차 | `SSRF101` | WolvCTF 2022 | **SSRF / Internal Service Access** | 서버 측 요청 기능 분석 → localhost 내부 서비스 접근 → 연쇄 엔드포인트를 통한 flag 읽기 |
 | 6주차 | `difference-check` | idekCTF 2021 | **SSRF Filter Bypass** | SSRF 필터 검증 요청과 실제 요청의 차이 분석 → URL 검증/요청 불일치 악용 → 로컬 flag 엔드포인트 접근 |
 | 6주차 | `graphql-101` | LINE CTF 2024 | **GraphQL Logic Flaw / Rate Limit Bypass** | GraphQL API 구조, OTP 상태 관리와 rate limit 동작 분석 → WAF 및 요청 제한 우회 → admin 인증 로직 공략 |
+| 7주차 | `A Simple Calculator` | UMDCTF 2022 | **Code Injection / Python eval** | 사용자 수식이 `eval`로 처리되는 구조와 입력 필터 분석 → 필터 우회를 통한 의도하지 않은 코드 실행 |
+| 7주차 | `dyslexxec` | DownUnderCTF 2022 | **XXE / XML External Entity** | XLSM 내부 XML과 메타데이터 처리 과정 분석 → 외부 엔티티를 이용한 서버 파일 접근 |
+| 7주차 | `Jar` | angstromCTF 2021 | **Insecure Deserialization / Python Pickle** | 쿠키에 저장된 직렬화 데이터 분석 → 신뢰할 수 없는 `pickle` 역직렬화 악용 |
+| 8주차 | `FileClub` | FooBarCTF 2022 | **File Polyglot + Tar Path Traversal** | 여러 파일 형식 검증을 동시에 통과하는 polyglot 구성 → `tar.extractall` 경로 검증 부족을 이용한 파일 덮어쓰기 가능성 분석 |
+| 8주차 | `ImportedKimchi` | HackPack 2022 | **Insecure Deserialization / Pickle RCE** | 확장자 기반 파일 업로드 검증 → 업로드 파일을 `pickle.loads`로 처리하는 구조 악용 → 임의 코드 실행 |
+| 8주차 | `LemonThinker` | RaRCTF 2021 | **OS Command Injection** | 사용자 입력이 `os.system` 명령 문자열에 포함되는 구조 분석 → 셸 해석을 이용한 명령 주입 |
 
 ## 공통 배포 변경 사항
 

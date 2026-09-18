@@ -60,21 +60,6 @@ Payload / Exploit
 결과
 ```
 
-이미지가 필요한 경우 문제 폴더 내부에 `images/` 디렉터리를 생성하여 관리합니다.
-
-```text
-problem-name/
-├── README.md
-└── images/
-    ├── 01.png
-    └── 02.png
-```
-
-Markdown에서는 다음과 같이 사용할 수 있습니다.
-
-```md
-![description](./images/01.png)
-```
 
 ## Study
 
