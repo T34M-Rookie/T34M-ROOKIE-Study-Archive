@@ -405,11 +405,3 @@ if data["password"].kind != JString:
 * **중복 키를 보안 값에 사용하면 안 됨**
 
   JSON 구현마다 첫 번째 값 또는 마지막 값을 선택하는 방식이 다를 수 있으므로, 중복 키가 포함된 입력은 명시적으로 거부하는 것이 안전합니다.
-
----
-
-## 8. Reference
-
-* [HITCON CTF 2023 - Login System Official Write-up](https://github.com/maple3142/My-CTF-Challenges/tree/master/HITCON%20CTF%202023/Login%20System)
-* [Nim 1.6.14 `std/asynchttpserver`](https://github.com/nim-lang/Nim/blob/v1.6.14/lib/pure/asynchttpserver.nim)
-* [Nim 1.6.14 `std/json`](https://github.com/nim-lang/Nim/blob/v1.6.14/lib/pure/json.nim)
