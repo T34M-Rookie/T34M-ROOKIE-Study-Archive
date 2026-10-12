@@ -5,7 +5,6 @@
 * **Target Challenge:** Login System
 * **Category:** Web Hacking
 * **Key Concept:** TE.TE HTTP Request Smuggling / Nim RawNumber JSON Injection / Privilege Escalation
-* **Presentation Script:** [Login System 발표 대본](Login%20System%20발표%20대본.md)
 
 ---
 
